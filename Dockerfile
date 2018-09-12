@@ -8,7 +8,7 @@ ENV GDAL_SKIP=netCDF
 
 COPY ./convert.go /go/src/convert/convert.go
 
-RUN cd /go/src/convert && go get "github.com/thhomas/gdal" && go install .
+RUN cd /go/src/convert && go get "github.com/lukeroth/gdal" && go install .
 
 ENTRYPOINT ["/go/bin/convert"]
 
